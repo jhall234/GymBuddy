@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">GymBuddy</string>
+
+    //Buttons
+    <string name="button_text">Button Tittle</string>
+
 </resources>
