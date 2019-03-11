@@ -1,14 +1,12 @@
 package com.csci448.jhallinan.gymbuddy
 
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import android.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_workout_details.*
 
 class WorkoutDetailsActivity: AppCompatActivity() {
-    private var workoutList: ArrayList<WorkoutViewItem> = ArrayList()
+    private var workoutList: ArrayList<WorkoutCardItem> = ArrayList()
 
 
 

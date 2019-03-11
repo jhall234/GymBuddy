@@ -3,7 +3,7 @@ package com.csci448.jhallinan.gymbuddy
 import android.os.Parcel
 import android.os.Parcelable
 
-data class WorkoutViewItem(val title: String, val imageResource: Int): Parcelable {
+data class WorkoutCardItem(val title: String, val imageResource: Int): Parcelable {
 
     constructor(parcel: Parcel) : this(
         parcel.readString(),
@@ -19,12 +19,12 @@ data class WorkoutViewItem(val title: String, val imageResource: Int): Parcelabl
         return 0
     }
 
-    companion object CREATOR : Parcelable.Creator<WorkoutViewItem> {
-        override fun createFromParcel(parcel: Parcel): WorkoutViewItem {
-            return WorkoutViewItem(parcel)
+    companion object CREATOR : Parcelable.Creator<WorkoutCardItem> {
+        override fun createFromParcel(parcel: Parcel): WorkoutCardItem {
+            return WorkoutCardItem(parcel)
         }
 
-        override fun newArray(size: Int): Array<WorkoutViewItem?> {
+        override fun newArray(size: Int): Array<WorkoutCardItem?> {
             return arrayOfNulls(size)
         }
     }

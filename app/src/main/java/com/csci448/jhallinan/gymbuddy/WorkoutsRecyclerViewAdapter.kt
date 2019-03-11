@@ -9,14 +9,14 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.workouts_fragment_list_item.view.*
 
 
-class WorkoutsRecyclerViewAdapter(val items: List<WorkoutViewItem>, val listener: (Int) -> Unit):
+class WorkoutsRecyclerViewAdapter(val items: List<WorkoutCardItem>, val listener: (Int) -> Unit):
     RecyclerView.Adapter<WorkoutsRecyclerViewAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val itemTitle: TextView = itemView.workouts_fragment_list_item_title
         val itemImage:ImageView = itemView.workouts_fragment_list_item_background_image_view
 
-        fun bind(item: WorkoutViewItem, listener: (Int) -> Unit) = with(itemView) {
+        fun bind(item: WorkoutCardItem, listener: (Int) -> Unit) = with(itemView) {
             itemTitle.text = item.title
             itemImage.setImageResource(item.imageResource)
 

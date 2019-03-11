@@ -8,7 +8,6 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import kotlinx.android.synthetic.main.workouts_fragment.*
 
 class WorkoutsFragment: Fragment() {
@@ -47,15 +46,15 @@ class WorkoutsFragment: Fragment() {
 
     companion object {
 
-        val FIRST_VIEW_LIST = arrayListOf<WorkoutViewItem>(WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells))
+        val FIRST_VIEW_LIST = arrayListOf<WorkoutCardItem>(WorkoutCardItem("default title", R.drawable.dumbells),
+                                                            WorkoutCardItem("default title", R.drawable.dumbells),
+                                                            WorkoutCardItem("default title", R.drawable.dumbells),
+                                                            WorkoutCardItem("default title", R.drawable.dumbells),
+                                                            WorkoutCardItem("default title", R.drawable.dumbells))
 
-        val SECOND_VIEW_LIST = arrayListOf<WorkoutViewItem>(WorkoutViewItem("default title", R.drawable.upper_body),
-            WorkoutViewItem("default title", R.drawable.upper_body),
-            WorkoutViewItem("default title", R.drawable.upper_body),
-            WorkoutViewItem("default title", R.drawable.upper_body))
+        val SECOND_VIEW_LIST = arrayListOf<WorkoutCardItem>(WorkoutCardItem("default title", R.drawable.upper_body),
+            WorkoutCardItem("default title", R.drawable.upper_body),
+            WorkoutCardItem("default title", R.drawable.upper_body),
+            WorkoutCardItem("default title", R.drawable.upper_body))
     }
 }
