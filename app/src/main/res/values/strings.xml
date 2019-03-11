@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">GymBuddy</string>
+    <string name="button_diets">Diet</string>
+    <string name="button_workout">Workout</string>
+    <string name="label_add_log">Add a Log:</string>
+    <string name="button_save">Save</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="hint_add_log">// add text here</string>
+    <string name="label_diet_history">Diet History:</string>
+    <string name="label_workout_history"> Workout History:</string>
 </resources>
