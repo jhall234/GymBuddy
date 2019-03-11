@@ -11,6 +11,15 @@ class MainActivity : AppCompatActivity(){
 
 
 
+
+    private fun setUpViewPager(viewPager: ViewPager){
+        val adapter = ViewPagerAdapter(supportFragmentManager)
+        adapter.addFragment(LogsFragment(), "Logs")
+        adapter.addFragment(RunningFragment(), "Running")
+        adapter.addFragment(WorkoutsFragment(), "Workouts")
+        viewPager.adapter = adapter
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,14 +30,5 @@ class MainActivity : AppCompatActivity(){
         setUpViewPager(view_pager)
         tab_layout.setupWithViewPager(view_pager)
     }
-
-    private fun setUpViewPager(viewPager: ViewPager){
-        val adapter = ViewPagerAdapter(supportFragmentManager)
-        adapter.addFragment(LogsFragment(), "Logs")
-        adapter.addFragment(RunningFragment(), "Running")
-        adapter.addFragment(WorkoutsFragment(), "Workouts")
-        viewPager.adapter = adapter
-    }
-
 
 }
