@@ -2,8 +2,6 @@ package com.csci448.jhallinan.gymbuddy
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -16,7 +14,7 @@ class MainActivity : AppCompatActivity(){
         val adapter = ViewPagerAdapter(supportFragmentManager)
         adapter.addFragment(LogsFragment(), "Logs")
         adapter.addFragment(RunningFragment(), "Running")
-        adapter.addFragment(WorkoutsFragment(), "Workouts")
+        adapter.addFragment(WorkoutCategoriesFragment(), "Workouts")
         viewPager.adapter = adapter
     }
 

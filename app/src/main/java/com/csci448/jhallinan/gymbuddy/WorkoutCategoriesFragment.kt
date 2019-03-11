@@ -8,10 +8,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import kotlinx.android.synthetic.main.workouts_fragment.*
 
-class WorkoutsFragment: Fragment() {
+class WorkoutCategoriesFragment: Fragment() {
 
     // Will turn true if on the second list, letting
     // us know we can redirect to the workout text
@@ -36,13 +35,11 @@ class WorkoutsFragment: Fragment() {
         workouts_fragment_recycler_view.layoutManager = layoutManager
 
         adapter = WorkoutsRecyclerViewAdapter(FIRST_VIEW_LIST){ position ->
-            val intent = Intent(context, WorkoutDetailsActivity::class.java)
-            intent.putParcelableArrayListExtra(WorkoutDetailsActivity.EXTRA_SECOND_VIEW_LIST, SECOND_VIEW_LIST)
+            val intent = Intent(context, WorkoutPlansActivity::class.java)
+            intent.putParcelableArrayListExtra(WorkoutPlansActivity.EXTRA_SECOND_VIEW_LIST, SECOND_VIEW_LIST)
             startActivity(intent)
         }
         workouts_fragment_recycler_view.adapter = adapter
-
-
     }
 
     companion object {
