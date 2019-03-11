@@ -47,15 +47,21 @@ class WorkoutsFragment: Fragment() {
 
     companion object {
 
-        val FIRST_VIEW_LIST = arrayListOf<WorkoutViewItem>(WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells),
-                                                            WorkoutViewItem("default title", R.drawable.dumbells))
+        val FIRST_VIEW_LIST = arrayListOf<WorkoutViewItem>(
+            WorkoutViewItem("Weight Lifting", R.drawable.dumbells),
+            WorkoutViewItem("Calithenics", R.drawable.workout_frag_calisthenics),
+            WorkoutViewItem("Cardio", R.drawable.workouts_frag_cardio),
+            WorkoutViewItem("Diet", R.drawable.workout_frag_diet),
+            WorkoutViewItem("Fitness Challenges", R.drawable.workout_frag_challenge)
+        )
 
-        val SECOND_VIEW_LIST = arrayListOf<WorkoutViewItem>(WorkoutViewItem("default title", R.drawable.upper_body),
-            WorkoutViewItem("default title", R.drawable.upper_body),
-            WorkoutViewItem("default title", R.drawable.upper_body),
-            WorkoutViewItem("default title", R.drawable.upper_body))
+        val SECOND_VIEW_LIST = arrayListOf<WorkoutViewItem>(
+            WorkoutViewItem("Weight Lifting", R.drawable.dumbells),
+            WorkoutViewItem("Chest and Tricpes", R.drawable.workouts_weights_arms),
+            WorkoutViewItem("Back and Bicepts", R.drawable.workouts_weights_back),
+            WorkoutViewItem("Legs", R.drawable.workouts_weights_squats),
+            WorkoutViewItem("Core/Abs", R.drawable.workouts_weights_abs),
+            WorkoutViewItem("Full Body", R.drawable.workouts_weights_fullbody)
+        )
     }
 }
