@@ -3,6 +3,7 @@ package com.csci448.jhallinan.gymbuddy
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import android.support.v4.view.PagerAdapter
 
 // Using FragmentPagerAdapter (stores in memory) because we only have 3 fragments
 class ViewPagerAdapter(fragmentManager: FragmentManager): FragmentPagerAdapter(fragmentManager) {

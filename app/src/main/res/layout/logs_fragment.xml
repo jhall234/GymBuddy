@@ -4,16 +4,31 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
         tools:context="com.csci448.jhallinan.gymbuddy.LogsFragment">
 
-    <TextView
-            android:layout_width="wrap_content"
+    <Button
+            android:id="@+id/diet_button"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:text="This is where the diet and workout buttons will go"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"/>
+            android:padding="25dp"
+            android:layout_margin="25dp"
+            android:background="@color/colorBlueButton"
+            android:textSize="32sp"
+            android:textColor="@color/textColorPrimary"
+            android:text="@string/button_diets"/>
+
+    <Button
+            android:id="@+id/workout_button"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:padding="25dp"
+            android:layout_margin="25dp"
+            android:background="@color/colorBlueButton"
+            android:textSize="32sp"
+            android:textColor="@color/textColorPrimary"
+            android:text="@string/button_workout"/>
 
 
 </LinearLayout>
