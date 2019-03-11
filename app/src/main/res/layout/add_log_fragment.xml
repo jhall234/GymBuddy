@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/add_logs_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/textColorPrimary"
+            android:textSize="32sp"
+            android:text="@string/label_add_log"/>
+
+    <EditText
+            android:id="@+id/log_edit_text"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:textSize="24sp"
+            android:hint="@string/hint_add_log"/>
+
+    <LinearLayout
+            android:id="@+id/save_cancel_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/save_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@color/colorBlueButton"
+                android:textSize="24sp"
+                android:textColor="@color/textColorPrimary"
+                android:text="@string/button_save"/>
+
+        <Button
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                android:background="@color/colorBlueButton"
+                android:textSize="24sp"
+                android:textColor="@color/textColorPrimary"
+                android:text="@string/button_cancel"/>
+
+    </LinearLayout>
+
+</LinearLayout>
