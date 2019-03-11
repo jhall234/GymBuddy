@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.text.format.DateFormat
+import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -76,6 +77,7 @@ class LogsListFragment: Fragment() {
         override fun onCreateViewHolder(p0: ViewGroup, p1: Int): LogHolder {
             val layoutInflater = LayoutInflater.from(fragment.context)
             val view = layoutInflater.inflate(R.layout.list_item_log, p0, false)
+            view.list_item_log_details_text_view.movementMethod = ScrollingMovementMethod()
             return LogHolder(fragment, view)
         }
 
