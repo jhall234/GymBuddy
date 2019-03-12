@@ -18,7 +18,8 @@ Logs entered cannot yet be edited or deleted
 Clicking on any of the workout sections within the workout tab (ie weight lifting) will all bring up the same page, 
 the feature is mostly to show an example of the layouts at this point
 Landscape layouts have not been created and state is not saved upon change in orientation yet
-Youtube links and various tutorials/reccomendations are not input yet.
+Youtube links and various tutorials/reccomendations are not input yet. Floating action button on Running Tab is half hidden, 
+scroll up on toolbar to fully uncover the FAB 
 
 Areas of Feedback:
 What other features would you like a workout app to include?
