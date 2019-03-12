@@ -20,6 +20,7 @@
         <activity android:name=".LogsListActivity"></activity>
         <activity android:name=".AddLogActivity"></activity>
         <activity android:name=".WorkoutPlansActivity"></activity>
+        <activity android:name=".AddRunActivity"></activity>
     </application>
 
 </manifest>
