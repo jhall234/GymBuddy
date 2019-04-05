@@ -1,4 +1,5 @@
 # GymBuddy Alpha Release
+
 Usage Instructions:
 Usage is simple and straight forward, the starting page consists of three tabs titled 'Logs, Running, Workouts'
 The Logs tab is designed to keep log histories of all recent diet and workout plans for reference. Clicking a 
