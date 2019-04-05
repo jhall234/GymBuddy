@@ -5,6 +5,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/workout_log_image"
         android:orientation="vertical">
 
     <TextView
@@ -16,6 +17,8 @@
             android:gravity="center"
             android:textStyle="bold"
             android:textSize="24sp"
+            android:textColor="@color/textColorPrimary"
+            android:fontFamily="@font/metropolis_regular"
             tools:text="Diet History:"/>
 
     <android.support.v7.widget.RecyclerView
