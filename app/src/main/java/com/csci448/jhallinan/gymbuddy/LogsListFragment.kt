@@ -20,6 +20,7 @@ class LogsListFragment: Fragment() {
         private const val LOG_TAG = "448.LogListFrag"
         private const val ARGS_LOG_TYPE = "LOG TYPE KEY"
         private const val REQUEST_CODE_ADD_LOG_FRAGMENT = 0
+        private const val REQUEST_CODE_EDIT_LOG_FRAGMENT = 1
 
         fun createFragment(log_type: Int) : LogsListFragment {
             val args = Bundle()
@@ -57,7 +58,7 @@ class LogsListFragment: Fragment() {
         }
 
         add_log_floating_action_button.setOnClickListener {
-            val intent = AddLogActivity.createIntent(context, log_type)
+            val intent = AddLogActivity.createIntent(context, log_type, 0,0)
             startActivityForResult(intent, REQUEST_CODE_ADD_LOG_FRAGMENT)
         }
     }
@@ -66,6 +67,19 @@ class LogsListFragment: Fragment() {
         fun bind(log: DataLog) {
             view.list_item_log_date_text_view.text = DateFormat.format("EEE. MMM, dd", log.date)
             view.list_item_log_details_text_view.text = log.details
+            val position = LogController.getPosition(log)
+            view.list_item_log_details_text_view.setOnClickListener {
+                if(position != -1) {
+                    val intent = AddLogActivity.createIntent(fragment.context, fragment.log_type, 1, position)
+                    fragment.startActivityForResult(intent, REQUEST_CODE_EDIT_LOG_FRAGMENT)
+                }
+            }
+            view.setOnClickListener {
+                if(position != -1) {
+                    val intent = AddLogActivity.createIntent(fragment.context, fragment.log_type, 1, position)
+                    fragment.startActivityForResult(intent, REQUEST_CODE_EDIT_LOG_FRAGMENT)
+                }
+            }
         }
     }
 
@@ -105,11 +119,10 @@ class LogsListFragment: Fragment() {
         if(resultCode != RESULT_OK) {
             return
         }
-        if (requestCode == REQUEST_CODE_ADD_LOG_FRAGMENT) {
+        if(requestCode == REQUEST_CODE_ADD_LOG_FRAGMENT || requestCode == REQUEST_CODE_EDIT_LOG_FRAGMENT) {
             if (data == null) {
                 return
             }
-
             update()
         }
     }
