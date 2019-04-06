@@ -11,9 +11,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:background="@color/colorPrimaryDark"
+            android:background="@color/colorPrimary"
             android:textColor="@color/textColorPrimary"
             android:textSize="32sp"
+            android:fontFamily="@font/metropolis_regular"
             android:text="@string/label_add_log"/>
 
     <EditText
@@ -39,9 +40,10 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:layout_margin="15dp"
-                android:background="@color/colorBlueButton"
+                android:background="@drawable/btn_shape"
                 android:textSize="24sp"
                 android:textColor="@color/textColorPrimary"
+                android:fontFamily="@font/metropolis_regular"
                 android:text="@string/button_save"/>
 
         <Button
@@ -50,9 +52,10 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:layout_margin="15dp"
-                android:background="@color/colorBlueButton"
+                android:background="@drawable/btn_shape"
                 android:textSize="24sp"
                 android:textColor="@color/textColorPrimary"
+                android:fontFamily="@font/metropolis_regular"
                 android:text="@string/button_cancel"/>
 
     </LinearLayout>

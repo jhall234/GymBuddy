@@ -6,6 +6,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:background="@drawable/workout_log_image"
+        android:fontFamily="@font/metropolis_regular"
         tools:context="com.csci448.jhallinan.gymbuddy.LogsFragment">
 
     <Button
@@ -14,9 +16,12 @@
             android:layout_height="wrap_content"
             android:padding="25dp"
             android:layout_margin="25dp"
-            android:background="@color/colorBlueButton"
+            android:background="@drawable/btn_shape"
             android:textSize="32sp"
             android:textColor="@color/textColorPrimary"
+
+            android:textAlignment="center"
+            android:fontFamily="@font/metropolis_regular"
             android:text="@string/button_diets"/>
 
     <Button
@@ -25,8 +30,10 @@
             android:layout_height="wrap_content"
             android:padding="25dp"
             android:layout_margin="25dp"
-            android:background="@color/colorBlueButton"
+            android:background="@drawable/btn_shape"
             android:textSize="32sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/metropolis_regular"
             android:textColor="@color/textColorPrimary"
             android:text="@string/button_workout"/>
 

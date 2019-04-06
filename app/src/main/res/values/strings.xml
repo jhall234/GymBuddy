@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GymBuddy</string>
+    <string name="app_name">Gym Buddy</string>
     <string name="button_diets">Diet</string>
     <string name="button_workout">Workout</string>
     <string name="label_add_log">Add a Log:</string>

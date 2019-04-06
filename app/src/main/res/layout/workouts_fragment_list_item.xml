@@ -24,7 +24,7 @@
             android:layout_gravity="center"
             android:textSize="36sp"
             android:text="Workout Type"
-            android:textStyle="bold"
+            android:fontFamily="@font/metropolis_regular"
             android:textColor="#FFFFFF"
             android:layout_centerInParent="true"/>
 
