@@ -1,15 +1,19 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.logs
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import com.csci448.jhallinan.gymbuddy.R
 
-class AddRunActivity: AppCompatActivity() {
+class LogsListActivity : AppCompatActivity() {
     companion object {
-        fun createIntent(context: Context?) : Intent {
-            val intent = Intent(context, AddRunActivity::class.java)
+        private const val EXTRA_LOG_TYPE = "LOG TYPE"
+
+        fun createIntent(context: Context?, log_type: Int?) : Intent {
+            val intent = Intent(context, LogsListActivity::class.java)
+            intent.putExtra(EXTRA_LOG_TYPE, log_type)
             return intent
         }
     }
@@ -26,6 +30,7 @@ class AddRunActivity: AppCompatActivity() {
     }
 
     fun createFragment() : Fragment {
-        return AddRunFragment.createFragment()
+        val log_type = intent.getIntExtra(EXTRA_LOG_TYPE, 0)
+        return LogsListFragment.createFragment(log_type)
     }
 }

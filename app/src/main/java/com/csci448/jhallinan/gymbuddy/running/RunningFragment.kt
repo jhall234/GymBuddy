@@ -1,4 +1,4 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.running
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -11,9 +11,10 @@ import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.csci448.jhallinan.gymbuddy.R
 
 import kotlinx.android.synthetic.main.list_item_run.view.*
-import kotlinx.android.synthetic.main.running_fragment.*
+import kotlinx.android.synthetic.main.fragment_running.*
 
 class RunningFragment : Fragment() {
 
@@ -23,7 +24,8 @@ class RunningFragment : Fragment() {
         if (::adapter.isInitialized) {
             adapter.notifyDataSetChanged()
         } else {
-            adapter = RunsListAdapter(this, RunController.getRunLogs())
+            adapter =
+                RunsListAdapter(this, RunController.getRunLogs())
             log_list_recycler_view.adapter = adapter
         }
     }
@@ -47,7 +49,7 @@ class RunningFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.running_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_running, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -55,7 +57,9 @@ class RunningFragment : Fragment() {
         update()
         running_fragment_fab.setOnClickListener {
             val intent = AddRunActivity.createIntent(context)
-            startActivityForResult(intent, REQUEST_CODE_ADD_RUNNING_FRAGMENT)
+            startActivityForResult(intent,
+                REQUEST_CODE_ADD_RUNNING_FRAGMENT
+            )
         }
     }
 

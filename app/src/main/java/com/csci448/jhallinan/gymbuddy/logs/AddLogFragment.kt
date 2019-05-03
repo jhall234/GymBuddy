@@ -1,4 +1,4 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.logs
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -8,7 +8,8 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.add_log_fragment.*
+import com.csci448.jhallinan.gymbuddy.R
+import kotlinx.android.synthetic.main.fragment_add_log.*
 
 class AddLogFragment: Fragment() {
     companion object {
@@ -40,7 +41,7 @@ class AddLogFragment: Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.add_log_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_add_log, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

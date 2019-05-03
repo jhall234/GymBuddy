@@ -9,7 +9,7 @@
             android:theme="@style/MyMaterialTheme"
             tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".MainActivity"
+            android:name=".main_pager.MainActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +17,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LogsListActivity"></activity>
-        <activity android:name=".AddLogActivity"></activity>
-        <activity android:name=".WorkoutPlansActivity"></activity>
-        <activity android:name=".AddRunActivity"></activity>
+        <activity android:name=".logs.LogsListActivity"></activity>
+        <activity android:name=".logs.AddLogActivity"></activity>
+        <activity android:name=".plans.WorkoutPlansActivity"></activity>
+        <activity android:name=".running.AddRunActivity"></activity>
     </application>
 
 </manifest>

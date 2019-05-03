@@ -1,4 +1,4 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.logs
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
@@ -11,9 +11,9 @@ import android.text.method.ScrollingMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.util.Log
+import com.csci448.jhallinan.gymbuddy.R
 import kotlinx.android.synthetic.main.list_item_log.view.*
-import kotlinx.android.synthetic.main.log_list_fragment.*
+import kotlinx.android.synthetic.main.fragment_log_list.*
 
 class LogsListFragment: Fragment() {
     companion object {
@@ -31,7 +31,7 @@ class LogsListFragment: Fragment() {
         }
     }
 
-    private lateinit var adapter:LogsListAdapter
+    private lateinit var adapter: LogsListAdapter
 
     var log_type = 0
 
@@ -42,7 +42,7 @@ class LogsListFragment: Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.log_list_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_log_list, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -58,8 +58,10 @@ class LogsListFragment: Fragment() {
         }
 
         add_log_floating_action_button.setOnClickListener {
-            val intent = AddLogActivity.createIntent(context, log_type, 0,0)
-            startActivityForResult(intent, REQUEST_CODE_ADD_LOG_FRAGMENT)
+            val intent = AddLogActivity.createIntent(context, log_type, 0, 0)
+            startActivityForResult(intent,
+                REQUEST_CODE_ADD_LOG_FRAGMENT
+            )
         }
     }
 
@@ -70,14 +72,28 @@ class LogsListFragment: Fragment() {
             val position = LogController.getPosition(log)
             view.list_item_log_details_text_view.setOnClickListener {
                 if(position != -1) {
-                    val intent = AddLogActivity.createIntent(fragment.context, fragment.log_type, 1, position)
-                    fragment.startActivityForResult(intent, REQUEST_CODE_EDIT_LOG_FRAGMENT)
+                    val intent = AddLogActivity.createIntent(
+                        fragment.context,
+                        fragment.log_type,
+                        1,
+                        position
+                    )
+                    fragment.startActivityForResult(intent,
+                        REQUEST_CODE_EDIT_LOG_FRAGMENT
+                    )
                 }
             }
             view.setOnClickListener {
                 if(position != -1) {
-                    val intent = AddLogActivity.createIntent(fragment.context, fragment.log_type, 1, position)
-                    fragment.startActivityForResult(intent, REQUEST_CODE_EDIT_LOG_FRAGMENT)
+                    val intent = AddLogActivity.createIntent(
+                        fragment.context,
+                        fragment.log_type,
+                        1,
+                        position
+                    )
+                    fragment.startActivityForResult(intent,
+                        REQUEST_CODE_EDIT_LOG_FRAGMENT
+                    )
                 }
             }
         }
@@ -105,9 +121,15 @@ class LogsListFragment: Fragment() {
             adapter.notifyDataSetChanged()
         } else {
             if(log_type == 0) {
-                adapter = LogsListAdapter(this, LogController.getDietLogs())
+                adapter = LogsListAdapter(
+                    this,
+                    LogController.getDietLogs()
+                )
             } else {
-                adapter = LogsListAdapter(this, LogController.getWorkoutLogs())
+                adapter = LogsListAdapter(
+                    this,
+                    LogController.getWorkoutLogs()
+                )
             }
             log_list_recycler_view.adapter = adapter
         }

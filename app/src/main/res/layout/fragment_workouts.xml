@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.csci448.jhallinan.gymbuddy.LogsFragment">
+        tools:context="com.csci448.jhallinan.gymbuddy.logs.LogsFragment">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/workouts_fragment_recycler_view"

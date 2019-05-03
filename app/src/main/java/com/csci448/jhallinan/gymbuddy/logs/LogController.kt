@@ -1,6 +1,5 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.logs
 
-import android.provider.ContactsContract
 import java.util.*
 
 object LogController {

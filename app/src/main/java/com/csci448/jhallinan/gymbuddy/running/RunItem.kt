@@ -1,12 +1,14 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.running
 
 import java.util.*
 
-class DataLog {
+class RunItem {
     var id : UUID
         private set
 
     var date: Date = Date()
+    var distance: Double = 0.0
+    var time: Long = 0 //Time in milliseconds
     var details : String = ""
 
     init {

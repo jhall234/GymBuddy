@@ -1,4 +1,4 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.plans
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import kotlinx.android.synthetic.main.workouts_fragment_list_item.view.*
+import com.csci448.jhallinan.gymbuddy.R
+import kotlinx.android.synthetic.main.fragment_workouts_list_item.view.*
 
 
 class WorkoutsRecyclerViewAdapter(val items: List<WorkoutViewItem>, val listener: (Int) -> Unit):
@@ -32,7 +33,7 @@ class WorkoutsRecyclerViewAdapter(val items: List<WorkoutViewItem>, val listener
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, position: Int): ViewHolder {
         val view = LayoutInflater.from(viewGroup.context)
-                        .inflate(R.layout.workouts_fragment_list_item, viewGroup, false)
+                        .inflate(R.layout.fragment_workouts_list_item, viewGroup, false)
         return ViewHolder(view)
     }
 

@@ -8,7 +8,7 @@
         android:gravity="center"
         android:background="@drawable/workout_log_image"
         android:fontFamily="@font/metropolis_regular"
-        tools:context="com.csci448.jhallinan.gymbuddy.LogsFragment">
+        tools:context="com.csci448.jhallinan.gymbuddy.logs.LogsFragment">
 
     <Button
             android:id="@+id/diet_button"

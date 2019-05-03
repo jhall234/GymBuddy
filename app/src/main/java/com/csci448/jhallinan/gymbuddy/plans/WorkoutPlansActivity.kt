@@ -1,8 +1,9 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.plans
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import com.csci448.jhallinan.gymbuddy.R
 import kotlinx.android.synthetic.main.activity_workout_details.*
 
 class WorkoutPlansActivity: AppCompatActivity() {

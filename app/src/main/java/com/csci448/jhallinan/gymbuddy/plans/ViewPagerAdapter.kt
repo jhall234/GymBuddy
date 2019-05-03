@@ -1,4 +1,4 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.plans
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

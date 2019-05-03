@@ -1,4 +1,4 @@
-package com.csci448.jhallinan.gymbuddy
+package com.csci448.jhallinan.gymbuddy.plans
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -7,8 +7,8 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import kotlinx.android.synthetic.main.workouts_fragment.*
+import com.csci448.jhallinan.gymbuddy.R
+import kotlinx.android.synthetic.main.fragment_workouts.*
 
 class WorkoutPlansFragment: Fragment() {
     private var workoutViewList: ArrayList<WorkoutViewItem> = ArrayList()
@@ -21,16 +21,19 @@ class WorkoutPlansFragment: Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.workouts_fragment, container, false)
+        return inflater.inflate(R.layout.fragment_workouts, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         layoutManager = LinearLayoutManager(context)
         workouts_fragment_recycler_view.layoutManager = layoutManager
 
-        adapter = WorkoutsRecyclerViewAdapter(workoutViewList){ position ->
+        adapter = WorkoutsRecyclerViewAdapter(workoutViewList) { position ->
             activity?.supportFragmentManager?.beginTransaction()
-                ?.replace(R.id.workout_details_fragment_container, WorkoutTextFragment())
+                ?.replace(
+                    R.id.workout_details_fragment_container,
+                    WorkoutTextFragment()
+                )
                 ?.commit()
         }
         workouts_fragment_recycler_view.adapter = adapter
