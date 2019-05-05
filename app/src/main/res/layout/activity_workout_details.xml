@@ -7,15 +7,9 @@
         android:orientation="vertical">
 
 
-    <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            app:layout_scrollFlags="scroll|enterAlways"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
-
-    </android.support.v7.widget.Toolbar>
+    <include
+            android:id="@+id/workout_details_toolbar"
+            layout="@layout/toolbar"/>
 
 
     <FrameLayout

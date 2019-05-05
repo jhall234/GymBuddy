@@ -3,6 +3,7 @@ package com.csci448.jhallinan.gymbuddy.plans
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.Toolbar
 import com.csci448.jhallinan.gymbuddy.R
 import kotlinx.android.synthetic.main.activity_workout_details.*
 
@@ -16,8 +17,8 @@ class WorkoutPlansActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_workout_details)
-
-        setSupportActionBar(toolbar);
+        val toolbar = workout_details_toolbar as Toolbar
+        setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.title = "Workouts"

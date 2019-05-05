@@ -9,4 +9,8 @@
     <string name="hint_add_log">// add text here</string>
     <string name="label_diet_history">Diet History:</string>
     <string name="label_workout_history"> Workout History:</string>
+    <string name="button_start_run">New Run!</string>
+    <string name="button_run_history">Run History</string>
+    <string name="start">Start</string>
+    <string name="done">Done</string>
 </resources>

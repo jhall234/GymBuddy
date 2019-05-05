@@ -2,18 +2,21 @@ package com.csci448.jhallinan.gymbuddy.main_pager
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.TabLayout
 import android.support.v4.view.ViewPager
 import com.csci448.jhallinan.gymbuddy.*
 import com.csci448.jhallinan.gymbuddy.logs.LogsFragment
 import com.csci448.jhallinan.gymbuddy.plans.ViewPagerAdapter
 import com.csci448.jhallinan.gymbuddy.plans.WorkoutCategoriesFragment
 import com.csci448.jhallinan.gymbuddy.running.RunningFragment
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_pager.*
+import android.support.design.widget.Snackbar
+import android.support.v4.view.ViewCompat.setBackgroundTintList
+import android.view.View
+import android.widget.Toast
+
 
 class MainActivity : AppCompatActivity(){
-
-
-
 
     private fun setUpViewPager(viewPager: ViewPager){
         val adapter = ViewPagerAdapter(supportFragmentManager)
@@ -23,9 +26,11 @@ class MainActivity : AppCompatActivity(){
         viewPager.adapter = adapter
     }
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_pager)
 
         setSupportActionBar(toolbar)
         //supportActionBar?.setDisplayHomeAsUpEnabled(true)
