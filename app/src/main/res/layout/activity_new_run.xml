@@ -10,7 +10,6 @@
         android:id="@+id/new_run_toolbar"
         layout="@layout/toolbar"/>
 
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -89,23 +88,55 @@
             android:button="@android:color/transparent"
             android:checked="false"/>
 
-    <Button
-            android:id="@+id/stop_run_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:visibility="invisible"
-            android:layout_gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:text="@string/done"
-            android:textSize="25sp"
-            android:textAlignment="center"
-            android:textColor="@color/textColorPrimary"
-            android:background="@color/colorBlueButton"
-            android:button="@android:color/transparent" android:fontFamily="sans-serif"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/pause_run_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/pause"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+                android:background="@color/colorBlueButton"
+                android:button="@android:color/transparent"
+                android:fontFamily="sans-serif"
+                android:visibility="invisible"
+        />
+
+        <Button
+                android:id="@+id/stop_run_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
+                android:visibility="invisible"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/done"
+                android:textSize="25sp"
+                android:textAlignment="center"
+                android:textColor="@color/textColorPrimary"
+                android:background="@color/colorBlueButton"
+                android:button="@android:color/transparent"
+                android:fontFamily="sans-serif"/>
+
+    </LinearLayout>
 
 
 </LinearLayout>

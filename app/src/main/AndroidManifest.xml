@@ -20,8 +20,10 @@
         <activity android:name=".logs.LogsListActivity"></activity>
         <activity android:name=".logs.AddLogActivity"></activity>
         <activity android:name=".plans.WorkoutPlansActivity"></activity>
-        <activity android:name=".running.AddRunActivity"></activity>
-        <activity android:name=".running.NewRunActivity"></activity>
+        <activity
+            android:name=".running.NewRunActivity"
+            android:parentActivityName=".main_pager.MainActivity">
+        </activity>
     </application>
 
 </manifest>
