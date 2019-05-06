@@ -1,17 +1,17 @@
 package com.csci448.jhallinan.gymbuddy.main_pager
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.support.design.widget.TabLayout
-import android.support.v4.view.ViewPager
+import com.google.android.material.tabs.TabLayout
+import androidx.viewpager.widget.ViewPager
 import com.csci448.jhallinan.gymbuddy.*
 import com.csci448.jhallinan.gymbuddy.logs.LogsFragment
 import com.csci448.jhallinan.gymbuddy.plans.ViewPagerAdapter
 import com.csci448.jhallinan.gymbuddy.plans.WorkoutCategoriesFragment
 import com.csci448.jhallinan.gymbuddy.running.RunningFragment
 import kotlinx.android.synthetic.main.activity_main_pager.*
-import android.support.design.widget.Snackbar
-import android.support.v4.view.ViewCompat.setBackgroundTintList
+import com.google.android.material.snackbar.Snackbar
+import androidx.core.view.ViewCompat.setBackgroundTintList
 import android.view.View
 import android.widget.Toast
 

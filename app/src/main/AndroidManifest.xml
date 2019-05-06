@@ -22,7 +22,9 @@
         <activity android:name=".plans.WorkoutPlansActivity"></activity>
         <activity
             android:name=".running.NewRunActivity"
-            android:parentActivityName=".main_pager.MainActivity">
+            android:parentActivityName=".main_pager.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden">
         </activity>
     </application>
 

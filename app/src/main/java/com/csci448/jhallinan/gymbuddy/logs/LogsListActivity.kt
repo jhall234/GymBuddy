@@ -3,8 +3,8 @@ package com.csci448.jhallinan.gymbuddy.logs
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import com.csci448.jhallinan.gymbuddy.R
 
 class LogsListActivity : AppCompatActivity() {
