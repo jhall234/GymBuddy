@@ -2,20 +2,25 @@
 <LinearLayout
 
         xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="com.csci448.jhallinan.gymbuddy.logs.LogsFragment">
+        android:orientation="vertical">
+
+    <include
+            android:id="@+id/plans_text_toolbar"
+            layout="@layout/toolbar"/>
 
     <TextView
+            android:id="@+id/plans_text_text_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Workout will go here"
             android:fontFamily="@font/metropolis_regular"
-            android:textSize="30dp"
-            android:textStyle="bold"
+            android:textSize="30sp"
             android:layout_marginLeft="40dp"
-            android:layout_marginRight="40dp"/>
+            android:layout_marginRight="40dp"
+            android:textAllCaps="false"
+            android:textAlignment="viewStart"/>
 
 
 </LinearLayout>
