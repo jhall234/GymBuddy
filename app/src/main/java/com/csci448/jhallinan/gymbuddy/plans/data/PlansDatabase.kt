@@ -12,7 +12,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-@Database(entities = [Category::class, Plan::class], version = 6)
+@Database(entities = [Category::class, Plan::class], version = 9)
 @TypeConverters(StringConverters::class)
 abstract class PlansDatabase : RoomDatabase() {
     abstract fun categoryDao(): CategoryDao
@@ -138,7 +138,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     5, "Full Body",
                     categoryDao.getCategoryId("Weight Lifting"),
-                    R.drawable.fullbody,
+                    R.drawable.upper_body,
                     arrayListOf<String>(
                         "3x 20 Burpees",
                         "3 min Jump Rope",
@@ -149,7 +149,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     6, "Chest and Triceps",
                     categoryDao.getCategoryId("Calisthenics"),
-                    R.drawable.arms,
+                    R.drawable.calisthenics_chest,
                     arrayListOf(
                         "12 Dips",
                         "10 Pushups ",
@@ -167,7 +167,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     7, "Back and Biceps",
                     categoryDao.getCategoryId("Calisthenics"),
-                    R.drawable.back,
+                    R.drawable.calisthenics_back,
                     arrayListOf(
                         "10 Pull-Ups",
                         "5 Wide Grip Pull-Ups",
@@ -186,7 +186,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     8, "Legs",
                     categoryDao.getCategoryId("Calisthenics"),
-                    R.drawable.squats,
+                    R.drawable.calisthenics_legs,
                     arrayListOf(
                         "10 Box jumps",
                         "20 Jumping squats",
@@ -205,7 +205,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     9, "Core/Abs",
                     categoryDao.getCategoryId("Calisthenics"),
-                    R.drawable.abs,
+                    R.drawable.calisthenics_abs,
                     arrayListOf<String>(
                         "45sec Knee slappers",
                         "45sec Russian twists",
@@ -222,7 +222,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     10, "Full Body",
                     categoryDao.getCategoryId("Calisthenics"),
-                    R.drawable.fullbody,
+                    R.drawable.calisthenics_full,
                     arrayListOf<String>(
                         "3x 20 Burpees",
                         "3 min Jump Rope",
@@ -234,7 +234,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     11, "Upper Body",
                     categoryDao.getCategoryId("Cardio"),
-                    R.drawable.arms,
+                    R.drawable.cardio_upper,
                     arrayListOf(
                         "MAX Pushups",
                         "MAX Dips",
@@ -245,7 +245,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     12, "Lower Body",
                     categoryDao.getCategoryId("Cardio"),
-                    R.drawable.back,
+                    R.drawable.cardio_lower,
                     arrayListOf(
                         "Treadmill (alternate speed/slope)",
                         "MAX Suidcide sprints",
@@ -258,7 +258,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     13, "Mid/Full Body",
                     categoryDao.getCategoryId("Cardio"),
-                    R.drawable.squats,
+                    R.drawable.cardio,
                     arrayListOf(
                         "MAX Burpees",
                         "MAX Mountain climbers",
@@ -287,7 +287,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     15, "Upper Body",
                     categoryDao.getCategoryId("Fitness Challenges"),
-                    R.drawable.arms,
+                    R.drawable.upper_body,
                     arrayListOf(
                         "200 Pushups",
                         "100 Pull ups",
@@ -297,7 +297,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     16, "Lower Body",
                     categoryDao.getCategoryId("Fitness Challenges"),
-                    R.drawable.back,
+                    R.drawable.fitness_challenge_lower,
                     arrayListOf(
                         "5 minute mile",
                         "500 Body Weight Squats",
@@ -307,7 +307,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     17, "Mid/Full Body",
                     categoryDao.getCategoryId("Fitness Challenges"),
-                    R.drawable.squats,
+                    R.drawable.fitness_challenge_mid,
                     arrayListOf(
                         "500 situps",
                         "Swim a mile",
@@ -318,7 +318,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     18, "Rest Day",
                     categoryDao.getCategoryId("Diet"),
-                    R.drawable.arms,
+                    R.drawable.diet_rest,
                     arrayListOf(
                         "Spinach",
                         "Asparagus",
@@ -331,7 +331,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     19, "Heavy Lift Day",
                     categoryDao.getCategoryId("Diet"),
-                    R.drawable.back,
+                    R.drawable.diet_heavy,
                     arrayListOf(
                         "Chicken",
                         "Fish",
@@ -343,7 +343,7 @@ abstract class PlansDatabase : RoomDatabase() {
                 Plan(
                     20, "Cardio/Calisthenics",
                     categoryDao.getCategoryId("Diet"),
-                    R.drawable.squats,
+                    R.drawable.diet_cardio,
                     arrayListOf(
                         "Berries(pre workout)",
                         "Pineapple(pre workout)",
