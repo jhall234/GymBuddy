@@ -56,6 +56,7 @@ abstract class RunsDatabase : RoomDatabase() {
         }
 
         fun populateDatabase(runDao: RunDao){
+            runDao.deleteAll()
         }
     }
 }

@@ -130,7 +130,7 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
-        supportActionBar?.title = "Workouts"
+        supportActionBar?.title = "New Run"
         toolbar.setNavigationOnClickListener { finish() }
 
         // View Model
@@ -200,7 +200,7 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
 
         pause_run_button.setOnClickListener {
             isPaused = true
-            notificationManager.cancel(NOTIFICATION_ID)
+            notificationManager.cancelAll()
             start_run_button.visibility = Button.VISIBLE
             stop_run_button.visibility = Button.INVISIBLE
             pause_run_button.visibility = Button.INVISIBLE
@@ -211,6 +211,14 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
 
         stop_run_button.setOnClickListener {
 
+            isClockOn = false
+            isPaused = false
+
+            start_run_button.visibility = Button.VISIBLE
+            stop_run_button.visibility = Button.INVISIBLE
+            pause_run_button.visibility = Button.INVISIBLE
+
+
             val date  = Calendar.getInstance().time
             val elapsedTime = SystemClock.elapsedRealtime() - chronometer.base
             val steps = stepsTaken
@@ -218,7 +226,14 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
 
             val newRun = Run(0, date, steps, distance, elapsedTime)
             chronometer.stop()
+
             runsViewModel.insert(newRun)
+            notificationManager.cancelAll()
+
+            stepsTaken = 0
+            initialSteps = 0
+            distanceTraveled = 0.0
+            timeWhenPaused = 0
 
             finish()
 
@@ -236,7 +251,9 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
     }
 
     override fun onPause() {
-        updateNotification()
+        if (isClockOn) {
+            updateNotification()
+        }
         sensorManager.unregisterListener(this)
         super.onPause()
     }

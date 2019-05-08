@@ -1,5 +1,7 @@
 package com.csci448.jhallinan.gymbuddy.main_pager
 
+import android.app.NotificationManager
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
@@ -31,6 +33,12 @@ class MainActivity : AppCompatActivity(){
 
         setUpViewPager(view_pager)
         tab_layout.setupWithViewPager(view_pager)
+
+        val notificationManager =
+            getSystemService(
+                Context.NOTIFICATION_SERVICE ) as NotificationManager
+
+        notificationManager.cancelAll()
     }
 
 }
