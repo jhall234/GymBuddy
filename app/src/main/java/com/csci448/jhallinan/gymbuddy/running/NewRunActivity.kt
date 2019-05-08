@@ -22,9 +22,14 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import android.util.Log
+import android.view.MenuItem
 import android.widget.Button
+import androidx.lifecycle.ViewModelProviders
 import com.csci448.jhallinan.gymbuddy.R
+import com.csci448.jhallinan.gymbuddy.plans.PlansViewModel
+import com.csci448.jhallinan.gymbuddy.running.data.Run
 import kotlinx.android.synthetic.main.activity_new_run.*
+import java.util.*
 
 class NewRunActivity: AppCompatActivity(), SensorEventListener {
 
@@ -46,6 +51,9 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
 
     private lateinit var resultIntent: Intent
     private lateinit var resultPendingIntent: PendingIntent
+
+
+    private lateinit var runsViewModel: RunsViewModel
 
 
     private fun updateSteps(){
@@ -125,6 +133,10 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
         supportActionBar?.title = "Workouts"
         toolbar.setNavigationOnClickListener { finish() }
 
+        // View Model
+
+        runsViewModel = ViewModelProviders.of(this).get(RunsViewModel::class.java)
+
         // Notifications
         notificationManager =
                 getSystemService(
@@ -196,6 +208,22 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
             timeWhenPaused = chronometer.base - SystemClock.elapsedRealtime()
             chronometer.stop()
         }
+
+        stop_run_button.setOnClickListener {
+
+            val date  = Calendar.getInstance().time
+            val elapsedTime = SystemClock.elapsedRealtime() - chronometer.base
+            val steps = stepsTaken
+            val distance = distanceTraveled
+
+            val newRun = Run(0, date, steps, distance, elapsedTime)
+            chronometer.stop()
+            runsViewModel.insert(newRun)
+
+            finish()
+
+        }
+
     }
 
     override fun onResume() {
@@ -228,6 +256,18 @@ class NewRunActivity: AppCompatActivity(), SensorEventListener {
                 }
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item?.itemId) {
+            android.R.id.home -> {
+                notificationManager.cancel(NOTIFICATION_ID)
+                chronometer.stop()
+                return true
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
     }
 
     override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {}

@@ -14,4 +14,9 @@
     <string name="start">Start</string>
     <string name="done">Done</string>
     <string name="pause">Pause</string>
+    <string name="run_item_date">"%1$tb %1$td %1$tR</string>
+    <string name="run_item_steps">%1$s steps</string>
+    <string name="run_item_distance">Distance: %1$s miles</string>
+    <string name="run_item_time">Run Time: %1$s</string>
+
 </resources>

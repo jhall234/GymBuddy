@@ -11,7 +11,7 @@ import androidx.room.ForeignKey.CASCADE
             onDelete = CASCADE))
 )
 class Plan (
-    @PrimaryKey(autoGenerate = true) var planId: Int,
+    @PrimaryKey var planId: Int,
     @ColumnInfo(name = "plan_name") var planName: String?,
     @ColumnInfo(name = "category_id") var categoryId: Int?,
     @ColumnInfo(name = "image_id") var imageId: Int?,

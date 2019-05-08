@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.csci448.jhallinan.gymbuddy.R
 import com.csci448.jhallinan.gymbuddy.plans.data.Plan
-import com.csci448.jhallinan.gymbuddy.plans.data.PlanItem
 import kotlinx.android.synthetic.main.activity_plans_detail.*
 
 class PlansDetailActivity: AppCompatActivity() {

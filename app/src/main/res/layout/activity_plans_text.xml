@@ -20,7 +20,8 @@
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
             android:textAllCaps="false"
-            android:textAlignment="viewStart"/>
+            android:textAlignment="viewStart"
+            android:scrollbars="vertical"/>
 
 
 </LinearLayout>

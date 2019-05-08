@@ -1,5 +1,6 @@
 package com.csci448.jhallinan.gymbuddy.plans.data
 
+import android.util.Log
 import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import kotlinx.coroutines.CoroutineScope
@@ -16,6 +17,7 @@ class PlansRepository(
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun getAllCategories() = withContext(Dispatchers.IO){
+        Log.d("PlansRepository", "getAllCategoriesCalled")
         categoryDao.getAllCategories()
     }
 

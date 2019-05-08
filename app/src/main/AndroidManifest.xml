@@ -27,6 +27,12 @@
             android:screenOrientation="portrait"
             android:configChanges="orientation|keyboardHidden">
         </activity>
+        <activity
+                android:name=".running.RunHistoryActivity"
+                android:parentActivityName=".main_pager.MainActivity">
+
+        </activity>
+
     </application>
 
 </manifest>
